@@ -15,6 +15,8 @@
 		1BFBDB2826FEA00600B55D3B /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFBDB2626FEA00600B55D3B /* FeedTableViewCell.swift */; };
 		1BFBDB2926FEA00600B55D3B /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BFBDB2726FEA00600B55D3B /* FeedTableViewCell.xib */; };
 		1BFBDB2C26FEB97200B55D3B /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFBDB2B26FEB97200B55D3B /* FeedTableViewController.swift */; };
+		1BFBDB3026FED12C00B55D3B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFBDB2F26FED12C00B55D3B /* User.swift */; };
+		1BFBDB3226FED21300B55D3B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFBDB3126FED21300B55D3B /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		1BFBDB2626FEA00600B55D3B /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		1BFBDB2726FEA00600B55D3B /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		1BFBDB2B26FEB97200B55D3B /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		1BFBDB2F26FED12C00B55D3B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1BFBDB3126FED21300B55D3B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		1BFBDB1026FE9F8900B55D3B /* FaceClone */ = {
 			isa = PBXGroup;
 			children = (
+				1BFBDB2D26FED04700B55D3B /* model */,
 				1BFBDB2A26FEB93A00B55D3B /* viewController */,
 				1BFBDB2526FE9FF100B55D3B /* view */,
 				1BFBDB1126FE9F8900B55D3B /* AppDelegate.swift */,
@@ -87,6 +92,15 @@
 				1BFBDB2B26FEB97200B55D3B /* FeedTableViewController.swift */,
 			);
 			path = viewController;
+			sourceTree = "<group>";
+		};
+		1BFBDB2D26FED04700B55D3B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1BFBDB2F26FED12C00B55D3B /* User.swift */,
+				1BFBDB3126FED21300B55D3B /* Post.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +178,8 @@
 				1BFBDB1226FE9F8900B55D3B /* AppDelegate.swift in Sources */,
 				1BFBDB2826FEA00600B55D3B /* FeedTableViewCell.swift in Sources */,
 				1BFBDB1426FE9F8900B55D3B /* SceneDelegate.swift in Sources */,
+				1BFBDB3226FED21300B55D3B /* Post.swift in Sources */,
+				1BFBDB3026FED12C00B55D3B /* User.swift in Sources */,
 				1BFBDB2C26FEB97200B55D3B /* FeedTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

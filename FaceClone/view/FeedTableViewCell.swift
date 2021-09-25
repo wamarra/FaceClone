@@ -30,13 +30,13 @@ class FeedTableViewCell: UITableViewCell {
         tableview.register(xib, forCellReuseIdentifier: kReuseIdentifier)
     }
     
-    func setup(with user: Any?) {
+    func setup(with user: User?, post: Post?) {
         let date = Date().timeIntervalSince1970
         profilePicture.image = UIImage(data: try! Data(contentsOf: URL(string: "http://lorempixel.com.br/100/100?\(date)")!))
-        givenName.text = "João da Silva"
+        givenName.text = user?.name
         postDate.text = "Sexta-feira, 24 de Set de 2021 às 21:15"
-        postText.text = "Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Viva Forevis aptent taciti sociosqu ad litora torquent. Quem num gosta di mé, boa gentis num é."
-        postImage.image = try! UIImage.init(data: Data.init(contentsOf: URL(string: "http://lorempixel.com.br/600/450?\(date+1)")!))
+        postText.text = post?.body
+        postImage.image = UIImage(data: try! Data(contentsOf: URL(string: "http://lorempixel.com.br/600/450?\(date+1)")!))
         likes.text = "150 likes"
         comments.text = "32 Commentários"
     }
