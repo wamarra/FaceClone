@@ -44,7 +44,7 @@ class FeedTableViewCell: UITableViewCell {
     @IBAction func onPostOptions(_ sender: UIButton) {
         
     }
-
+    
     @IBAction func onLike(_ sender: UIButton) {
         
     }

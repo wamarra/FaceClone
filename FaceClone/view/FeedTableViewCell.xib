@@ -157,7 +157,7 @@
                 <outlet property="postDate" destination="upF-ss-NxP" id="QTZ-ve-xUE"/>
                 <outlet property="postImage" destination="TZv-wf-MUh" id="5qX-Mn-yIM"/>
                 <outlet property="postText" destination="43j-RY-Q1i" id="dtt-9I-Uxq"/>
-                <outlet property="profilePicture" destination="YCG-54-oRu" id="QkD-39-ix5"/>
+                <outlet property="profilePicture" destination="YCG-54-oRu" id="zd8-Bp-fzD"/>
             </connections>
             <point key="canvasLocation" x="-142.02898550724638" y="156.69642857142856"/>
         </tableViewCell>

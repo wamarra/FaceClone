@@ -10,6 +10,9 @@ import UIKit
 class FeedTableViewController: UITableViewController {
     
     private let kBaseURL = "https://jsonplaceholder.typicode.com"
+    @IBOutlet var button: UIButton!
+    
+    private var count = 10
     
     private var users = [User]() {
         didSet {
@@ -33,6 +36,19 @@ class FeedTableViewController: UITableViewController {
         super.viewDidLoad()
         
         FeedTableViewCell.register(in: tableView)
+        
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(self.onRefresh(_:)), for: .valueChanged)
+    }
+    
+    @objc private func onRefresh(_ sender: UIRefreshControl) {
+       count += 5
+        
+        tableView.reloadSections([0], with: .automatic)
+        
+        getData(from: "users")
+        
+        sender.endRefreshing()
     }
     
     private func getData(from type: String) {
