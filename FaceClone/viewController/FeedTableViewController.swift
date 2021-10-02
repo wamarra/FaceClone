@@ -9,8 +9,8 @@ import UIKit
 
 class FeedTableViewController: UITableViewController {
     
+    let SegueAlbumsViewController = "AlbumsViewController"
     private let kBaseURL = "https://jsonplaceholder.typicode.com"
-    @IBOutlet var button: UIButton!
     
     private var count = 10
     
@@ -82,6 +82,21 @@ class FeedTableViewController: UITableViewController {
         cell.setup(with: user, post: post)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: SegueAlbumsViewController, sender: self)
+            
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SegueAlbumsViewController {
+            if let indexPath = tableView.indexPathForSelectedRow, let user = users[indexPath.row] as? User {
+                let destinationViewController = segue.destination as! AlbumTableViewController
+                destinationViewController.user = user
+            }
+        }
     }
 }
 

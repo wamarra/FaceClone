@@ -10,6 +10,8 @@ import UIKit
 class FeedTableViewCell: UITableViewCell {
     
     static let kReuseIdentifier = "FeedTableViewCell"
+    
+    private var userId: Int!
 
     @IBOutlet weak var profilePicture: UIImageView!
     
@@ -39,6 +41,7 @@ class FeedTableViewCell: UITableViewCell {
         postImage.image = UIImage(data: try! Data(contentsOf: URL(string: "http://lorempixel.com.br/600/450?\(date+1)")!))
         likes.text = "150 likes"
         comments.text = "32 Commentários"
+        userId = user?.id
     }
     
     @IBAction func onPostOptions(_ sender: UIButton) {

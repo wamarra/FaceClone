@@ -11,30 +11,23 @@
         <scene sceneID="mBY-AA-Q63">
             <objects>
                 <tableViewController id="vWz-tQ-tYX" customClass="FeedTableViewController" customModule="FaceClone" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="JbY-T2-9ip">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="CbL-Xx-pXd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="h3i-Jd-z4J">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h3i-Jd-z4J" id="X1v-sD-mEx">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="vWz-tQ-tYX" id="q7a-74-xrf"/>
-                            <outlet property="delegate" destination="vWz-tQ-tYX" id="TlP-He-IbM"/>
+                            <outlet property="dataSource" destination="vWz-tQ-tYX" id="JoQ-5K-YlA"/>
+                            <outlet property="delegate" destination="vWz-tQ-tYX" id="1Na-KL-dUK"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Faceclone" id="lmJ-ch-qx8"/>
+                    <connections>
+                        <segue destination="swF-Qz-wmw" kind="show" identifier="AlbumsViewController" id="kG4-so-3ga"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEB-om-pol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="631.8840579710145" y="-8.0357142857142847"/>
+            <point key="canvasLocation" x="610" y="-8"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lga-pV-LHw">
@@ -47,12 +40,31 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vWz-tQ-tYX" kind="relationship" relationship="rootViewController" id="wKa-eD-DtE"/>
+                        <segue destination="vWz-tQ-tYX" kind="relationship" relationship="rootViewController" id="0Bb-8S-yp4"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DB-BR-x1c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-278.26086956521743" y="-8.0357142857142847"/>
+            <point key="canvasLocation" x="-170" y="-8"/>
+        </scene>
+        <!--Album-->
+        <scene sceneID="q0E-MZ-SKh">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kv7-Xo-Vwh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tableViewController id="swF-Qz-wmw" customClass="AlbumTableViewController" customModule="FaceClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="G7F-yq-rFw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="swF-Qz-wmw" id="gq5-6h-EFh"/>
+                            <outlet property="delegate" destination="swF-Qz-wmw" id="Cl1-EH-DdX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Album" id="njv-py-g5v"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1370" y="-8"/>
         </scene>
     </scenes>
     <resources>
