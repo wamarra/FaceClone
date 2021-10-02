@@ -9,6 +9,8 @@ import UIKit
 
 class AlbumTableViewController: UITableViewController {
     
+    let SeguePhotosViewController = "PhotosCollectionView"
+    
     private let kBaseURL = "https://jsonplaceholder.typicode.com"
     
     private var count = 10
@@ -27,6 +29,21 @@ class AlbumTableViewController: UITableViewController {
         AlbumTableViewCell.register(in: tableView)
         
         getData()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: SeguePhotosViewController, sender: self)
+            
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SeguePhotosViewController {
+            if let indexPath = tableView.indexPathForSelectedRow, let album = albums[indexPath.row] as? Album {
+                let destinationViewController = segue.destination as! PhotoCollectionViewController
+                destinationViewController.album = album
+            }
+        }
     }
     
     private func getData() {
