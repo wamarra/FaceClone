@@ -92,9 +92,9 @@ class FeedTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SegueAlbumsViewController {
-            if let indexPath = tableView.indexPathForSelectedRow, let user = users[indexPath.row] as? User {
+            if let indexPath = tableView.indexPathForSelectedRow, let user = users[indexPath.row] as AnyObject? {
                 let destinationViewController = segue.destination as! AlbumTableViewController
-                destinationViewController.user = user
+                destinationViewController.user = user as? User
             }
         }
     }

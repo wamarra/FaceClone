@@ -39,9 +39,9 @@ class AlbumTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SeguePhotosViewController {
-            if let indexPath = tableView.indexPathForSelectedRow, let album = albums[indexPath.row] as? Album {
+            if let indexPath = tableView.indexPathForSelectedRow, let album = albums[indexPath.row] as AnyObject? {
                 let destinationViewController = segue.destination as! PhotoCollectionViewController
-                destinationViewController.album = album
+                destinationViewController.album = album as? Album
             }
         }
     }
